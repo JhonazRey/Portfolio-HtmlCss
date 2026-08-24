@@ -277,24 +277,42 @@ nav ul li:last-child a:active {
     border-radius: 8px; 
     position: relative;
     overflow: hidden;
+    background:radial-gradient(
+    circle,
+    rgba(0, 255, 65, 0.50) 0%,
+    rgba(0, 153, 39, 0.30) 100%
+    ), url("/img/grid-Bg.jpg") center / cover no-repeat;
 }
 
 .img-border .grid-bg img {
+    object-fit: contain;
+    filter: brightness(0.7);
+    width: 100%;
     height: 100%;
-    width: 100%;   
 }
 
-.img-border .grid-bg::after {
-    content: "";
+.img-border .grid-bg .available-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(10, 26, 13, 80%);
     position: absolute;
-    inset: 0;
-    background: radial-gradient(
-    circle,
-    rgba(0, 255, 65, 0.30) 0%,
-    rgba(0, 153, 39, 0.45) 100%
-);
-
+    left: 25%;
+    bottom: 10px;
 }
+
+.grid-bg .available-tag p {
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    letter-spacing: 0.0625em;
+    line-height: 1;
+}
+
+
 
 
 
