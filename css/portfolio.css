@@ -182,59 +182,9 @@ nav ul li:last-child a:active {
 
 .left-section-text .aspiring span {
     color: var(--primary-color);
-    /* position: relative;
-    display: inline-block;
-    color: transparent;
-    -webkit-text-stroke: .07rem var(--primary-color);
-    animation: display-text 12s linear infinite;
-    animation-delay: calc(-4s * var(--i));*/
 }
 
-/* @keyframes display-text {
-    25%,
-    100% {
-        display: none;
-    }
-}
 
-.left-section-text .aspiring span::before {
-    content: attr(data-text);
-    position: absolute;
-    width: 0;
-    border-right: .2rem solid var(--primary-color);
-    color: var(--primary-color);
-    white-space: nowrap;
-    overflow: hidden;
-    animation: fill-text 4s linear infinite;
-}
-
-@keyframes fill-text {
-    0%,
-    10% {
-        width: 0;
-    }
-
-    70%,
-    90% {
-        width: 100%;
-    }
-
-    100% {
-        width: 0;
-    }
-} */
-
-/* @keyframes fill-text {
-    10%,
-    100% {
-        width: 0;
-    }
-
-    70%,
-    90% {
-        width: 100%;
-    }
-} */
 
 .left-section-content {
     display: flex;
@@ -277,7 +227,7 @@ nav ul li:last-child a:active {
 
 
 
-.left-section-content .buttons .circle-1 {
+/* .left-section-content .buttons .circle-1 {
     width:clamp(10px, 20px, 25px);
     height: clamp(10px, 20px, 25px);
     border-radius: 50%;
@@ -305,10 +255,122 @@ nav ul li:last-child a:active {
     height: clamp(10px, 20px, 25px);
     border-radius: 50%;
     background: var(--divider-section-color);
+} */
+
+.left-section-content .buttons .circle-1,
+.left-section-content .buttons .circle-2,
+.left-section-content .buttons .circle-3,
+.left-section-content .buttons .circle-4 {
+    width: clamp(10px, 20px, 25px);
+    height: clamp(10px, 20px, 25px);
+    border-radius: 50%;
+}
+
+.circle-1 {
+    animation: circle1 4s steps(4) infinite;
+}
+
+.circle-2 {
+    animation: circle2 4s steps(4) infinite;
+}
+
+.circle-3 {
+    animation: circle3 4s steps(4) infinite;
+}
+
+.circle-4 {
+    animation: circle4 4s steps(4) infinite;
+}
+
+@keyframes circle1 {
+    0% {
+        background: var(--hover-color);
+    }
+
+    25% {
+        background: var(--pressed-border-color);
+    }
+
+    50% {
+        background: var(--disabled-color);
+    }
+
+    75% {
+        background: var(--divider-section-color);
+    }
+
+    100% {
+        background: var(--hover-color);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        background: var(--pressed-border-color);
+    }
+
+    25% {
+        background: var(--disabled-color);
+    }
+
+    50% {
+        background: var(--divider-section-color);
+    }
+
+    75% {
+        background: var(--hover-color);
+    }
+
+    100% {
+        background: var(--pressed-border-color);
+    }
+}
+
+@keyframes circle3 {
+    0% {
+        background: var(--disabled-color);
+    }
+
+    25% {
+        background: var(--divider-section-color);
+    }
+
+    50% {
+        background: var(--hover-color);
+    }
+
+    75% {
+        background: var(--pressed-border-color);
+    }
+
+    100% {
+        background: var(--disabled-color);
+    }
+}
+
+@keyframes circle4 {
+    0% {
+        background: var(--divider-section-color);
+    }
+
+    25% {
+        background: var(--hover-color);
+    }
+
+    50% {
+        background: var(--pressed-border-color);
+    }
+
+    75% {
+        background: var(--disabled-color);
+    }
+
+    100% {
+        background: var(--divider-section-color);
+    }
 }
 
 .hero .right-section {
-    /* height: 100%; */
     display: flex;
     align-items: center;
     position: relative;
