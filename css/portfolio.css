@@ -30,7 +30,7 @@ body {
     --font-secondary: 'Plus Jakarta Sans', 'Poppins', sans-serif;
     --naz-font: 'Alfa Slab One', 'Poppins', sans-serif;
     --heading-text-size: clamp(1.5rem, 2.5vw, 2.22rem);
-    --display-title-text: clamp(1.75rem, 3.5vw, 3.56rem);
+    --display-title-text: clamp(2.25rem, 3.52vw, 3.625rem);
     --primary-color: #00ff41;
     --hover-color: #00d435;
     --pressed-border-color: #00a828;
@@ -153,29 +153,30 @@ nav ul li:last-child a:active {
     width: 100%;
     height: 100dvh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.50rem;
     align-items: center;
-    justify-content: space-between;
     padding-left: var(--padding-sides);
     padding-right: var(--padding-sides);
 }
 
 .hero .left-section {
-    /* height: 100%; */
-    width: clamp(400px, 39.0625vw, 630px);
+    /* width: 380px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
+    justify-content: start;
+    gap: 12px;
 }
 
 .left-section-text .name {
-    font-size: var(--display-title-text);
+    font-size: 28px;
     font-family: var(--font-primary);
     color: var(--heading-text-color);
 }
 
 .left-section-text .aspiring {
-    font-size: var(--heading-text-size);
+    font-size: 24px;
     font-family: var(--font-primary);
     color: var(--heading-text-color);
 }
@@ -189,11 +190,12 @@ nav ul li:last-child a:active {
 .left-section-content {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .left-section-content p {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 3.75vw, 1rem);;
     font-family: var(--font-secondary);
     color: var(--body-text-color);
 }
@@ -201,20 +203,19 @@ nav ul li:last-child a:active {
 .left-section-content .buttons {
     display: flex;
     align-items: center;
-    gap: 1.50rem;
+    gap: 0.875rem;
     
 }
 
 .left-section-content .buttons .view-projects {
     display: inline-flex;
-    padding: 12px 6px 12px 24px;
+    padding: 0.75em 1.5em;
     background: var(--primary-color);
     color: var(--dark-color);
-    font-size: 1rem;
+    font-size:  clamp(0.75rem, 2.8vw, 1rem);;
     font-family: var(--font-secondary);
     font-weight: 600;
     align-items: center;
-    gap: 0.667em;
     border-radius: 50px;
     transition: background .2 ease, box-shadow 0.2s ease;
 }
@@ -225,150 +226,33 @@ nav ul li:last-child a:active {
     cursor: pointer;
 }
 
-
-
-/* .left-section-content .buttons .circle-1 {
-    width:clamp(10px, 20px, 25px);
-    height: clamp(10px, 20px, 25px);
-    border-radius: 50%;
-    
-    background: var(--hover-color);
+.left-section-content .buttons .chevron-1 {
+    color: #22C55E;
+    font-size: 1.75rem;
+    display: none;
 }
 
-.left-section-content .buttons .circle-2{
-    width: clamp(10px, 20px, 25px);
-    height: clamp(10px, 20px, 25px);
-    border-radius: 50%;
-    
-    background: var(--pressed-border-color);
+.left-section-content .buttons .chevron-2 {
+    color: #16A34A;
+    font-size: 1.75rem;
+    display: none;
 }
 
-.left-section-content .buttons .circle-3{
-    width: clamp(10px, 20px, 25px);
-    height: clamp(10px, 20px, 25px);
-    border-radius: 50%;
-    background: var(--disabled-color);
+.left-section-content .buttons .chevron-3 {
+    color: #15803D;
+    font-size: 1.75rem;
+    display: none;
 }
 
-.left-section-content .buttons .circle-4{
-    width: clamp(10px, 20px, 25px);
-    height: clamp(10px, 20px, 25px);
-    border-radius: 50%;
-    background: var(--divider-section-color);
-} */
-
-.left-section-content .buttons .circle-1,
-.left-section-content .buttons .circle-2,
-.left-section-content .buttons .circle-3,
-.left-section-content .buttons .circle-4 {
-    width: clamp(10px, 20px, 25px);
-    height: clamp(10px, 20px, 25px);
-    border-radius: 50%;
+.left-section-content .buttons .chevron-4 {
+    color: #166534;
+    font-size: 1.75rem;
+    display: none;
 }
 
-.circle-1 {
-    animation: circle1 4s steps(4) infinite;
-}
 
-.circle-2 {
-    animation: circle2 4s steps(4) infinite;
-}
 
-.circle-3 {
-    animation: circle3 4s steps(4) infinite;
-}
 
-.circle-4 {
-    animation: circle4 4s steps(4) infinite;
-}
-
-@keyframes circle1 {
-    0% {
-        background: var(--hover-color);
-    }
-
-    25% {
-        background: var(--pressed-border-color);
-    }
-
-    50% {
-        background: var(--disabled-color);
-    }
-
-    75% {
-        background: var(--divider-section-color);
-    }
-
-    100% {
-        background: var(--hover-color);
-    }
-}
-
-@keyframes circle2 {
-    0% {
-        background: var(--pressed-border-color);
-    }
-
-    25% {
-        background: var(--disabled-color);
-    }
-
-    50% {
-        background: var(--divider-section-color);
-    }
-
-    75% {
-        background: var(--hover-color);
-    }
-
-    100% {
-        background: var(--pressed-border-color);
-    }
-}
-
-@keyframes circle3 {
-    0% {
-        background: var(--disabled-color);
-    }
-
-    25% {
-        background: var(--divider-section-color);
-    }
-
-    50% {
-        background: var(--hover-color);
-    }
-
-    75% {
-        background: var(--pressed-border-color);
-    }
-
-    100% {
-        background: var(--disabled-color);
-    }
-}
-
-@keyframes circle4 {
-    0% {
-        background: var(--divider-section-color);
-    }
-
-    25% {
-        background: var(--hover-color);
-    }
-
-    50% {
-        background: var(--pressed-border-color);
-    }
-
-    75% {
-        background: var(--disabled-color);
-    }
-
-    100% {
-        background: var(--divider-section-color);
-    }
-}
 
 .hero .right-section {
     display: flex;
@@ -381,8 +265,8 @@ nav ul li:last-child a:active {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--pressed-border-color);
-    width: 400px;
-    height: 400px;
+    width: clamp(250px, 70vw, 300px);
+    height: clamp(250px, 70vw, 300px);
     border-radius: 8px;
     animation: borderGlow 2s ease-in-out infinite;
 }
@@ -400,8 +284,8 @@ nav ul li:last-child a:active {
 }
 
 .img-border .grid-bg {
-    width: 380px;
-    height: 380px; 
+    width: clamp(235px, 50vw, 280px);
+    height: clamp(235px, 50vw, 280px); 
     border-radius: 8px; 
     position: relative;
     overflow: hidden;
@@ -519,4 +403,35 @@ nav ul li:last-child a:active {
 
 
 
+/* ---------Nav Buttom---------- */
+.nav-buttom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    background: var(--disabled-color);
+}
 
+.nav-buttom .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ------------ Media Query ------------------ */
+
+
+@media (max-width: 799px) {
+    header {
+        background: none;
+    }
+
+    header nav {
+        display: none;
+    }
+}
