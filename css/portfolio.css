@@ -1034,9 +1034,9 @@ figcaption .tech-use p {
   background: var(--cards-bg);
   border: 1px solid var(--pressed-border-color);
   border-radius: 4px;
-  padding: 2.5rem 2rem;
-  height: 450px;
-  width: 450px;
+  padding: 2rem 2rem;
+  height: 380px;
+  width: 280px;
   position: relative;
 }
 
@@ -1070,16 +1070,16 @@ figcaption .tech-use p {
   font-size: 24px;
   font-weight: 600;
   color: var(--primary-color);
-  margin: 0 0 0.4rem;
+    margin-bottom: 4px;
   letter-spacing: 0.04em;
   line-height: 1.2;
   text-shadow: 0 0 12px rgba(0,255,65,0.4);
 }
 
 .cp-tagline {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--secondary-text-color);
-  margin: 0 0 2rem;
+  margin-bottom: 16px;
   font-family: var(--font-secondary);
   letter-spacing: 0.02em;
 }
@@ -1088,19 +1088,19 @@ figcaption .tech-use p {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 1.1rem;
+  margin-bottom: 16px;
 }
 
 .cp-divider-line {
   flex: 1;
-  height: 1px;
+  height: 1.5px;
   background: var(--pressed-border-color);
   opacity: 0.4;
 }
 
 .cp-divider-label {
   font-family: var(--font-secondary);
-  font-size: 10px;
+  font-size: 8px;
   color: var(--secondary-text-color);
   letter-spacing: 0.1em;
 }
@@ -1108,10 +1108,10 @@ figcaption .tech-use p {
 .cp-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   border: 1px solid var(--pressed-border-color);
-  border-radius: 3px;
-  padding: 13px 15px;
+  border-radius: 4px;
+  padding: 10px 12px;
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
@@ -1119,6 +1119,7 @@ figcaption .tech-use p {
   font-family: var(--font-secondary);
   background: rgba(0,168,40,0.04);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .cp-item:hover {
@@ -1131,10 +1132,10 @@ figcaption .tech-use p {
 }
 
 .cp-icon {
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   border: 1px solid var(--pressed-border-color);
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1143,7 +1144,7 @@ figcaption .tech-use p {
 }
 
 .cp-icon i {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--primary-color);
 }
 
@@ -1151,15 +1152,15 @@ figcaption .tech-use p {
 
 .cp-item-label {
   font-family: var(--font-secondary);
-  font-size: 11px;
+  font-size: 10px;
   color: var(--secondary-text-color);
-  margin: 0 0 2px;
+  margin-bottom: 2px;
   letter-spacing: 0.08em;
   transition: color 0.2s;
 }
 
 .cp-item-value {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--body-text-color);
   margin: 0;
   font-weight: 500;
@@ -1167,23 +1168,23 @@ figcaption .tech-use p {
 
 .cp-arrow {
   color: var(--pressed-border-color);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .cp-location {
-  margin-top: 1.75rem;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 2px;
   font-family: var(--font-secondary);
-  font-size: 12px;
+  font-size: 8px;
   color: var(--secondary-text-color);
   letter-spacing: 0.06em;
 }
 
 .cp-location i {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--pressed-border-color);
 }
 
