@@ -80,17 +80,23 @@ header {
     z-index: 10;
 }
 
-header h4 {
+header h4 a {
     font-family: var(--naz-font);
     font-size: 1.5rem;
     color: var(--heading-text-color);
+    text-decoration: none;
     font-weight: 400;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-header h4:hover {
+header h4 a:hover {
     color: var(--primary-color);
     cursor: pointer;
+    text-shadow: 0 4px 8px rgba(12, 12, 12, 0.25);
+}
+
+header nav ul li a.active {
+    color: var(--pressed-border-color);
     text-shadow: 0 4px 8px rgba(12, 12, 12, 0.25);
 }
 
@@ -108,6 +114,7 @@ nav ul li a {
     font-size: 1.25rem;
     font-family: var(--font-secondary);
     position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li:not(:last-child) a::after {
@@ -118,14 +125,24 @@ nav ul li:not(:last-child) a::after {
     width: 0;
     height: 1.5px;
     background-color: var(--primary-color);
-    transition: width 0.3s ease, color .3s ease;
+    transition: width 0.3s ease;
 }
 
 nav ul li:not(:last-child) a:hover {
     color: var(--primary-color);
+    text-shadow: 0 4px 8px rgba(12, 12, 12, 0.25);
 }
 
  nav ul li:not(:last-child) a:hover::after {
+    width: 100%;
+}
+
+nav ul li:not(:last-child) a.active {
+    color: var(--pressed-border-color);
+    text-shadow: 0 4px 8px rgba(12, 12, 12, 0.25);
+}
+
+nav ul li:not(:last-child) a.active::after {
     width: 100%;
 }
 
@@ -151,8 +168,9 @@ nav ul li:last-child a:focus {
     background: color-mix(in srgb, var(--primary-color), var(--dark-color) 12%);
 }
 
-nav ul li:last-child a:active {
-    background: color-mix(in srgb, var(--primary-color), var(--dark-color) 12%);
+nav ul li:last-child a.active {
+    background: var(--pressed-border-color);
+    color: var(--dark-color);
 }
 
 /* ------------------------------- */
@@ -178,6 +196,7 @@ nav ul li:last-child a:active {
         flex-direction: column;
         align-items: center;
         gap: 0.1875em;
+        text-decoration: none;
     }
 
     i, p {
@@ -193,7 +212,7 @@ nav ul li:last-child a:active {
     }
 
     .nav-icon.active :is(i, p) {
-        color: var(--hover-color);
+        color: var(--pressed-border-color);
     }
 
     .nav-icon-contact {
@@ -203,6 +222,7 @@ nav ul li:last-child a:active {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
         transition: background 0.2s ease, transform 0.2s ease;
     }
 
@@ -210,8 +230,8 @@ nav ul li:last-child a:active {
         color: var(--dark-color);
     }
 
-    .nav-icon-contact:active {
-        background: var(--hover-color);
+    .nav-icon-contact.active {
+        background: var(--pressed-border-color);
     }
 }
 
@@ -288,20 +308,21 @@ nav ul li:last-child a:active {
     
 }
 
-.left-section-content .buttons .view-projects {
+.left-section-content .buttons .view-projects a {
     display: inline-flex;
     padding: 0.75em 1.5em;
     background: var(--primary-color);
     color: var(--dark-color);
     font-size:  clamp(0.75rem, 2.8vw, 1rem);;
     font-family: var(--font-secondary);
+    text-decoration: none;
     font-weight: 600;
     align-items: center;
     border-radius: 50px;
     transition: background .2 ease, box-shadow 0.2s ease;
 }
 
-.left-section-content .buttons .view-projects:hover {
+.left-section-content .buttons .view-projects a:hover {
     background: color-mix(in srgb, var(--primary-color), var(--dark-color) 8%);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.16);
     cursor: pointer;
