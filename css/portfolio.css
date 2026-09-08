@@ -876,7 +876,7 @@ nav ul li:last-child a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .projects-headline-container .label {
@@ -897,14 +897,19 @@ nav ul li:last-child a.active {
     background: var(--background-line);
 }
 
+.projects-headline {
+    width: clamp(300px, 64vw, 360px);
+}
+
 .projects-headline h3 {
-    font-size: 24px;
+    font-size: clamp(1.75rem, 6vw, 2.125rem);
     color: var(--primary-color);
     font-family: var(--font-primary);
+    margin-bottom: 8px;
 }
 
 .projects-headline p {
-    font-size: 14px;
+    font-size: clamp(.875rem, 3vw, 1rem);
     color: var(--body-text-color);
     font-family: var(--font-secondary);
     line-height: 1.4;
@@ -1061,8 +1066,12 @@ figcaption .tech-use p {
   border: 1px solid var(--pressed-border-color);
   border-radius: 4px;
   padding: 2rem 2rem;
-  height: 380px;
-  width: 280px;
+  /* height: 380px;
+  width: 280px; */
+  /* height: 400px;
+  width: 380px; */
+  height: clamp(395px, 80vw, 420px);
+  width: clamp(280px,76vw, 400px);
   position: relative;
 }
 
@@ -1112,7 +1121,9 @@ figcaption .tech-use p {
 
 .cp-heading {
     font-family: var(--font-primary);
-    font-size: 24px;
+    /* font-size: 24px; */
+    /* font-size: 28px; */
+    font-size: clamp(1.5rem, 5.6vw, 2.125rem);
     font-weight: 600;
     color: var(--primary-color);
     text-align: center;
@@ -1123,11 +1134,12 @@ figcaption .tech-use p {
 }
 
 .cp-tagline {
-    font-size: 10px;
+    font-size: clamp(.625rem, 2.4vw, .875rem);
     color: var(--secondary-text-color);
     margin-bottom: 16px;
     font-family: var(--font-secondary);
     letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .cp-divider {
@@ -1146,7 +1158,7 @@ figcaption .tech-use p {
 
 .cp-divider-label {
   font-family: var(--font-secondary);
-  font-size: 8px;
+  font-size: clamp(.5rem, 2vw, .75rem);
   color: var(--secondary-text-color);
   letter-spacing: 0.1em;
 }
@@ -1178,8 +1190,8 @@ figcaption .tech-use p {
 }
 
 .cp-icon {
-  width: 30px;
-  height: 30px;
+  width: clamp(30px, 8vw, 50px);
+  height: clamp(30px, 8vw, 50px);
   border: 1px solid var(--pressed-border-color);
   border-radius: 4px;
   display: flex;
@@ -1190,7 +1202,7 @@ figcaption .tech-use p {
 }
 
 .cp-icon i {
-  font-size: 16px;
+  font-size: clamp(1rem, 3.6vw, 1.5rem);
   color: var(--primary-color);
 }
 
@@ -1198,7 +1210,7 @@ figcaption .tech-use p {
 
 .cp-item-label {
   font-family: var(--font-secondary);
-  font-size: 10px;
+  font-size: clamp(.625rem, 2.4vw, .875rem);
   color: var(--secondary-text-color);
   margin-bottom: 2px;
   letter-spacing: 0.08em;
@@ -1206,7 +1218,7 @@ figcaption .tech-use p {
 }
 
 .cp-item-value {
-  font-size: 12px;
+  font-size: clamp(.75rem, 2.8vw, 1rem);
   color: var(--body-text-color);
   margin: 0;
   font-weight: 500;
@@ -1214,7 +1226,7 @@ figcaption .tech-use p {
 
 .cp-arrow {
   color: var(--pressed-border-color);
-  font-size: 14px;
+  font-size: clamp(.875rem, 3.2vw, 1.125rem);
 }
 
 .cp-location {
@@ -1224,13 +1236,13 @@ figcaption .tech-use p {
   justify-content: center;
   gap: 2px;
   font-family: var(--font-secondary);
-  font-size: 8px;
+  font-size: clamp(.5rem, 2vw, .75rem);
   color: var(--secondary-text-color);
   letter-spacing: 0.06em;
 }
 
 .cp-location i {
-  font-size: 14px;
+  font-size: clamp(.875rem, 3.2vw, 1.125rem);
   color: var(--pressed-border-color);
 }
 
