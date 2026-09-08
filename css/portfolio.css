@@ -185,12 +185,12 @@ nav ul li:last-child a.active {
     left: 0;
     width: 100%;
     height: 57px;
-    /* background: var(--dark-color); */
     background: rgba(8, 18, 11, .78);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid rgba(57, 255, 120, .35);
     display: none;
+    z-index: 100;
 
     .nav-icon {
         display: flex;
@@ -248,7 +248,7 @@ nav ul li:last-child a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.50rem;
+    gap: 50px;
     align-items: center;
     padding-left: var(--padding-sides);
     padding-right: var(--padding-sides);
@@ -520,8 +520,7 @@ nav ul li:last-child a.active {
         padding-top: 60px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
+        justify-content: space-around;
 }
 
 .about-heading {
@@ -571,7 +570,7 @@ nav ul li:last-child a.active {
         font-size: 22px;
         color: var(--primary-color);
         font-family: var(--font-primary);
-        margin-top: 12px;
+        margin-top: 24px;
     }
 
     .goal{
@@ -762,7 +761,7 @@ nav ul li:last-child a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .label {
@@ -783,14 +782,19 @@ nav ul li:last-child a.active {
     background: var(--background-line);
 }
 
+.services-headline {
+    width: clamp(300px, 64vw, 360px);
+}
+
 .services-headline h3 {
-    font-size: 24px;
+    font-size: clamp(1.75rem, 6vw, 2.125rem);
     color: var(--primary-color);
     font-family: var(--font-primary);
+    margin-bottom: 8px;
 }
 
 .services-headline p {
-    font-size: 14px;
+    font-size: clamp(.875rem, 3vw, 1rem);
     color: var(--body-text-color);
     font-family: var(--font-secondary);
     line-height: 1.4;
@@ -801,7 +805,7 @@ nav ul li:last-child a.active {
     grid-template-columns: repeat(auto-fit, 250px);
     grid-auto-rows: 300px;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(2rem, 6.26vw, 6rem);
     padding: 1rem 0;
     height: 400px;
     width: 100%;
@@ -822,7 +826,7 @@ nav ul li:last-child a.active {
     border-radius: 12px;
     box-shadow: 0 2px 4px 0 rgba(12, 12, 12, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    z-index: 10;
+    z-index: 5;
 }
 
 .card-container:hover {
@@ -831,12 +835,12 @@ nav ul li:last-child a.active {
 }
 
 .card-container i {
-    font-size: 40px;
+    font-size: clamp(2.5rem, 8.4vw, 2.75rem);
     color: var(--primary-color);
 }
 
 .card-container h4 {
-    font-size: 22px;
+    font-size: clamp(1.375rem, 4.8vw, 1.625rem);
     font-family: var(--font-primary);
     margin-top: 4px;
     margin-bottom: 6px;
