@@ -51,4 +51,29 @@
         width: clamp(230px, 21.88vw, 330px);
         height: clamp(230px, 21.88vw, 330px);
     }
+
+    /* About Section Breakpoint */
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .about-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .about-left-section {
+        width: clamp(300px, 37.5vw, 450px);
+    }
+
+    .about-right-section {
+        width: clamp(300px, 33.33vw, 400px);
+    }
+
+    .about-right-section .skills {
+        margin-top: 0;
+    }
 }
