@@ -56,6 +56,7 @@ body {
         rgba(0, 255, 65, 0.2) 100%
     );
     --padding-sides: clamp(16px, 7.03vw, 120px);
+    --page-height: 100svh;
 
 }
 /* --------------------------------------------------------------------------------- */
@@ -243,8 +244,7 @@ nav ul li:last-child a.active {
 
 .hero {
     width: 100%;
-    height: 100dvh;
-    min-height: 550px;
+    min-height: var(--page-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -507,8 +507,7 @@ nav ul li:last-child a.active {
 
 .about {
     width: 100%;
-    height: 100dvh;
-    min-height: 700px;
+    min-height: var(--page-height);
     background: var(--divider-section-color);
     padding-left: var(--padding-sides);
     padding-right: var(--padding-sides);
@@ -730,8 +729,7 @@ nav ul li:last-child a.active {
 /* ------------------------------------------ */
 .services-container {
     width: 100%;
-    height: 100dvh;
-    min-height: 350px;
+    min-height: var(--page-height);
     background: var(--page-bg);
     padding-top: 60px;
     display: flex;
@@ -858,8 +856,7 @@ nav ul li:last-child a.active {
 
 .projects-container {
     width: 100%;
-    height: 100dvh;
-    min-height: 350px;
+    min-height: var(--page-height);
     background: var(--divider-section-color);
     padding-top: 60px;
     display: flex;
@@ -1037,8 +1034,7 @@ figcaption .tech-use p {
 /* --------- Contact Me Section ---------- */
 .contact-me-container {
     width: 100%;
-    height: 100dvh;
-    min-height: 550px;
+    min-height: var(--page-height);
     background: var(--page-bg);
     display: flex;
     align-items: center;
