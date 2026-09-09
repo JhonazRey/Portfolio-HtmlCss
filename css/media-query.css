@@ -77,3 +77,10 @@
         margin-top: 0;
     }
 }
+
+@media (min-width: 1280px) {
+    .cp-card {
+        /* width: clamp(280px,76vw, 400px); */
+        width: clamp(400px, 41.67vw, 600px);
+    }
+}

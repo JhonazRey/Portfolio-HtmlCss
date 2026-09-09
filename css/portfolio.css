@@ -55,7 +55,7 @@ body {
         rgba(0, 255, 65, 1) 50%,
         rgba(0, 255, 65, 0.2) 100%
     );
-    --padding-sides: clamp(16px, 7.03vw, 120px);
+    --padding-sides: clamp(16px, 9.375vw, 150px);
     --page-height: 100svh;
 
 }
@@ -776,6 +776,7 @@ nav ul li:last-child a.active {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    width: fit-content;
 }
 
 .label p {
@@ -786,7 +787,8 @@ nav ul li:last-child a.active {
 
 .label .line {
     height: 2px;
-    width: 100%;
+    width: calc(100% + 18px);
+    margin-left: -9px;
     background: var(--background-line);
 }
 
@@ -884,6 +886,7 @@ nav ul li:last-child a.active {
     align-items: center;
     text-align: center;
     gap: 16px;
+    width: fit-content;
 }
 
 .projects-headline-container .label {
@@ -900,7 +903,8 @@ nav ul li:last-child a.active {
 
 .projects-headline-container .label .line {
     height: 2px;
-    width: 100%;
+    width: calc(100% + 18px);
+  margin-left: -9px;
     background: var(--background-line);
 }
 
@@ -927,9 +931,8 @@ nav ul li:last-child a.active {
     grid-template-columns: repeat(auto-fit, clamp(250px, 60vw, 300px));
     grid-auto-rows: clamp(300px, 70vw, 350px);
     justify-content: center;
-    /* gap: 32px; */
     gap: clamp(2rem, 5.27vw, 4.125rem);
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 0;
     height: 400px;
     width: 100%;
     overflow-y: auto;
@@ -1052,6 +1055,8 @@ figcaption .tech-use p {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 24px;
     padding-top: 60px;
     padding-left: var(--padding-sides);
     padding-right: var(--padding-sides);
@@ -1070,15 +1075,31 @@ figcaption .tech-use p {
     pointer-events: none;
 }
 
+.contact-me-container .label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: fit-content;
+}
+
+.contact-me-container .label p {
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    color: var(--secondary-text-color);
+}
+
+.contact-me-container .label .line {
+    height: 2px;
+    width: calc(100% + 18px);
+    margin-left: -9px;
+    background: var(--background-line);
+}
+
 .cp-card {
   background: var(--cards-bg);
   border: 1px solid var(--pressed-border-color);
   border-radius: 4px;
   padding: 2rem 2rem;
-  /* height: 380px;
-  width: 280px; */
-  /* height: 400px;
-  width: 380px; */
   height: clamp(395px, 80vw, 420px);
   width: clamp(280px,76vw, 400px);
   position: relative;
